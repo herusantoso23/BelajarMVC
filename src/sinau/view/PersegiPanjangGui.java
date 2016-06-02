@@ -1,7 +1,5 @@
 package sinau.view;
 
-import java.awt.Label;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
