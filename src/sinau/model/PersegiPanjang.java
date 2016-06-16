@@ -4,12 +4,6 @@ public class PersegiPanjang implements BangunDatar {
 	private double panjang;
 	private double lebar;
 
-	public PersegiPanjang()
-	{
-		this.panjang = 0.0;
-		this.lebar = 0.0;
-	}
-
 	public double getPanjang() {
 		return panjang;
 	}

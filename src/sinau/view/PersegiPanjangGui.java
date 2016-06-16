@@ -5,7 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import sinau.controller.PersegiPanjangActionListener;
+import sinau.controller.PersegiPanjangHitungKelilingActionListener;
+import sinau.controller.PersegiPanjangHitungLuasActionListener;
 
 public class PersegiPanjangGui extends JFrame{
 	private JLabel labelTitlePersegiPanjang;
@@ -24,6 +25,7 @@ public class PersegiPanjangGui extends JFrame{
 		setLayout(null);
 		setTitle("Belajar MVC");
 		setSize(300, 300);
+		setBounds(490, 210, 300, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		labelTitlePersegiPanjang = new JLabel("Aplikasi Hitung Persegi Panjang");
@@ -57,11 +59,8 @@ public class PersegiPanjangGui extends JFrame{
 		sinauAcademy = new JLabel("#SinauDevelop");
 		sinauAcademy.setBounds(185, 230, 200, 20);
 
-		PersegiPanjangActionListener actionEvent = new PersegiPanjangActionListener(this);
-		buttonHitungLuas.addActionListener(actionEvent);
-		buttonHitungLuas.setActionCommand("buttonHitungLuas");
-		buttonHitungKeliling.addActionListener(actionEvent);
-		buttonHitungKeliling.setActionCommand("buttonHitungKeliling");
+		buttonHitungLuas.addActionListener(new PersegiPanjangHitungLuasActionListener(this));
+		buttonHitungKeliling.addActionListener(new PersegiPanjangHitungKelilingActionListener(this));
 
 		addComponent();
 	}
